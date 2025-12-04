@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'fuente bonita';
+    src: url("./images/fuentes/file.woff2");
+    font-style: normal;
+}
+.petit-formal-script-regular {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    text-shadow: 2px 2px 2px goldenrod;
+    font-size: xxx-large;
+}
+
+h1, .texto h2 {
+    font-family: "fuente bonita";
+    padding: 0;
+}
+header {
+    background-image:
+            linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)),
+            url("./images/claveles-difuminados.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 50px;
+}
+h4, .texto p {
+    font-family: "Petit Formal Script";
+}
+.ceremonia {
+    background-color: #E3E2D9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.ellachulapas {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+}
+.ellachulapas .texto {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: darkred;
+}
+.ellachulapas img {
+    width: 40%;
+    object-fit: cover;
+}
+.ellachulapas button {
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #E3E2D9;
+    background-color: darkred;
+    border-color: #590016;
+}
+.itinerario {
+    background-image:
+            linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)),
+            url("./images/fondo-claveles2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+    font-family: "fuente bonita";
+}
+.itinerario .horas {
+    font-family: "Petit Formal Script";
+}
