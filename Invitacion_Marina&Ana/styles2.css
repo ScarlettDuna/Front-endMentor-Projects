@@ -8,23 +8,12 @@
     font-weight: 400;
     font-style: normal;
 }
-
 body, html {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
-
-h1 {
-    text-shadow: 1px 1px 4px goldenrod;
-    font-size: xxx-large;
-}
-
-h1, .texto h2 {
-    font-family: "fuente bonita", sans-serif;
-    padding: 0;
 }
 header {
     background-image:
@@ -38,9 +27,23 @@ header {
     width: 100%;
     padding: 35px 0;
 }
+h1 {
+    font-family: "fuente bonita", sans-serif;
+    padding: 0;
+    text-shadow: 1px 1px 4px goldenrod;
+    font-size: xxx-large;
+}
+.texto {
+    font-weight: bold;
+}
 h4, .texto p {
     font-family: "Petit Formal Script", cursive;
     font-size: 20px;
+}
+h2 {
+    font-family: "fuente bonita", sans-serif;
+    font-size: 28px;
+    margin-top: 5px;
 }
 .ceremonia, .canciones{
     background-color: #e1e1e1;
@@ -85,7 +88,7 @@ h4, .texto p {
     color: white;
     text-align: center;
     width: 100%;
-    padding: 30px 0;
+    padding: 10px 0;
     font-family: "fuente bonita", sans-serif;
     text-shadow: 1px 1px 4px goldenrod;
     font-weight: bold;
@@ -98,7 +101,9 @@ h4, .texto p {
 }
 .itinerario p {
     margin: 8px;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 .albumfotos, .dudas {
     display: flex;
@@ -156,14 +161,14 @@ h4, .texto p {
     color: black;
     text-align: center;
     width: 100%;
-    padding: 30px 0;
+    padding: 10px 0 30px 0;
     font-family: "fuente bonita", sans-serif;
     font-weight: bold;
 }
 
 .alojamiento {
     background-image:
-            linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)),
+            linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)),
             url("./images/fondo-claveles3.jpg");
     background-size: cover;
     background-position: center;
@@ -174,21 +179,10 @@ h4, .texto p {
     padding: 10px 0;
     font-weight: bold;
 }
-.alojamiento h2, .asistencia h2, .tarjDudas h2 {
-    font-family: "fuente bonita", sans-serif;
-    font-size: 30px;
-    text-shadow: 2px 2px 2px whitesmoke;
-}
-.alojamiento p, .tarjDudas p {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 0 20px 20px;
-    font-family: "Petit Formal Script", cursive;
-    font-weight: bold;
-}
 .alojamiento p span {
     font-weight: bolder;
     font-size: larger;
+    text-shadow: 1px 1px 3px darkgoldenrod;
 }
 .tarjDudas {
     text-align: center;
@@ -201,6 +195,11 @@ h4, .texto p {
     overflow: hidden;
     padding: 20px 0;
     color: darkred;
+}
+.alojamiento p, .tarjDudas p {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 20px 20px;
 }
 
 /* cuenta atrás*/
@@ -293,4 +292,3 @@ footer img {
 .btn:hover {
     background-color: #590016;
 }
-
