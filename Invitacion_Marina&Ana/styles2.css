@@ -15,6 +15,22 @@ body, html {
     padding: 0;
     overflow-x: hidden;
 }
+:root {
+    --color-fondo1: #F6F0E2;
+    --color-tarjetas: #F3E4C7;
+}
+.layout-centro {
+    background-color: #F6F0E2;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.05);
+}
+
+.columna {
+    max-width: 1000px;
+    margin: 0 auto;   /* centra todo automáticamente */
+}
+
 header {
     background-image:
             linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.5)),
@@ -46,7 +62,7 @@ h2 {
     margin-top: 5px;
 }
 .ceremonia, .canciones{
-    background-color: #e1e1e1;
+    background-color: var(--color-fondo1);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,9 +73,9 @@ h2 {
 }
 .ellachulapas, .tarjcanciones {
     display: flex;
-    background: white;
+    background: var(--color-tarjetas);
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
     overflow: hidden;
     max-width: 600px;
     align-items: stretch;
@@ -69,7 +85,7 @@ h2 {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     color: darkred;
 }
@@ -88,7 +104,7 @@ h2 {
     color: white;
     text-align: center;
     width: 100%;
-    padding: 10px 0;
+    padding: 30px 0;
     font-family: "fuente bonita", sans-serif;
     text-shadow: 1px 1px 4px goldenrod;
     font-weight: bold;
@@ -109,7 +125,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e1e1e1;
+    background-color: var(--color-fondo1);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,8 +139,8 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 10px;
-    background-color: white;
-    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    background-color: var(--color-tarjetas);
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
     border-radius: 12px;
     max-width: 800px;
     width: 100%;
@@ -150,10 +166,14 @@ h2 {
     justify-content: center;
     text-align: center;
     color: darkred;
+    padding: 25px 20px;   /* espacio arriba y abajo */
+    max-width: 90%;       /* evita texto de lado a lado */
+    margin: 0 auto;       /* centra el contenido */
+    box-sizing: border-box;
 }
 .asistencia {
     background-image:
-            linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)),
+            linear-gradient(rgba(255,255,255,.65), rgba(255,255,255,.65)),
             url("./images/claveles-fondo.png");
     background-size: cover;
     background-position: center;
@@ -161,14 +181,21 @@ h2 {
     color: black;
     text-align: center;
     width: 100%;
-    padding: 10px 0 30px 0;
+    padding: 30px 0;
     font-family: "fuente bonita", sans-serif;
     font-weight: bold;
+}
+.asistencia .texto {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(2px); /* opcional, queda fino */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 }
 
 .alojamiento {
     background-image:
-            linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)),
+            linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)),
             url("./images/fondo-claveles3.jpg");
     background-size: cover;
     background-position: center;
@@ -176,7 +203,7 @@ h2 {
     color: black;
     text-align: center;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     font-weight: bold;
 }
 .alojamiento p span {
@@ -186,8 +213,8 @@ h2 {
 }
 .tarjDudas {
     text-align: center;
-    background-color: white;
-    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    background-color: var(--color-tarjetas);
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
     border-radius: 12px;
     max-width: 600px;
     width: 100%;
@@ -214,7 +241,7 @@ h2 {
     color: #fff;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.85);
     font-weight: 600;
-    padding: 16px;
+    padding: 30px 0;
     text-align: left;
     width: 100%;
 }
@@ -259,8 +286,8 @@ li p {
     font-size: 18px;
 }
 footer {
-    background-color: #e1e1e1;
-    padding: 40px 0;
+    background-color: var(--color-fondo1);;
+    padding: 30px 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -283,6 +310,7 @@ footer img {
     border-radius: 12px;
     font-family: "fuente bonita", sans-serif;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     transition: 0.2s ease;
@@ -291,4 +319,125 @@ footer img {
 
 .btn:hover {
     background-color: #590016;
+}
+
+.fade-lateral {
+    position: relative;
+    overflow: hidden; /* para que el fade no se salga */
+}
+
+.fade-lateral::before,
+.fade-lateral::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25px; /* ajusta según fuerza del fade */
+    pointer-events: none;
+    z-index: 2; /* encima del fondo, debajo del contenido */
+}
+
+/* fade en el lado izquierdo */
+.fade-lateral::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-fondo1), transparent);
+}
+
+/* fade en el lado derecho */
+.fade-lateral::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-fondo1), transparent);
+}
+.music-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+
+    width: 48px;
+    height: 48px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+.music-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Tarjetas de ceremonia y canciones */
+    .ellachulapas, .tarjcanciones {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .ellachulapas img,
+    .tarjcanciones img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .ellachulapas .texto,
+    .tarjcanciones .texto, .tarjcanciones .texto {
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        max-width: 85%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+
+    /* Álbum de fotos → 1 columna */
+    .tarjfotos {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+    }
+
+    .tarjfotos img {
+        object-fit: cover;
+    }
+
+    /* Countdown: que no se apriete */
+    .countdown-timer-ul {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .countdown-timer .date-item {
+        width: auto;
+        margin: 0 5px;
+    }
+
+    .countdown-timer ul li span {
+        font-size: 1.8rem;
+    }
+
+    /* Botones más adaptados */
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .fade-lateral::before,
+    .fade-lateral::after {
+        display: none !important;
+    }
+    .music-btn {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
 }

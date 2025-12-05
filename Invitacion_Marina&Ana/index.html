@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Boda Marina & Ana</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,12 +10,17 @@
     <link rel="stylesheet" href="styles2.css">
     <script src="./script.js" defer></script>
 </head>
-<body>
-<header>
+<body class="layout-centro">
+<main  class="columna">
+<header class="fade-lateral">
+    <button id="toggleMusic" class="btn music-btn">
+        <svg id="musicIcon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"></path>
+        </svg>
+    </button>
     <h1>Marina & Ana</h1>
     <h4>Sábado 23 de Mayo de 2026</h4>
 </header>
-<div class="transicion1"></div>
 <div class="ceremonia">
     <div class="ellachulapas">
         <img src="./images/WhatsApp%2520Image%25202025-11-13%2520at%252015_26_30.jpeg" alt="Ana y Marina vestidas de chulapas mirándose">
@@ -25,8 +31,7 @@
         </div>
     </div>
 </div>
-<div class="transicion2"></div>
-<div class="itinerario">
+<div class="itinerario fade-lateral">
     <h2>Itinerario</h2>
     <p class="horas">• 17:45 a 18:15 •</p>
     <p>Recepción de invitados</p>
@@ -50,7 +55,7 @@
         <img src="./images/WhatsApp%2520Image%25202025-11-13%2520at%252015_23_29%2520(2).jpeg" alt="Ana vestida de chulapa">
     </div>
 </div>
-<div class="asistencia texto">
+<div class="asistencia texto fade-lateral">
     <h2>Confirma tu Asistencia</h2>
     <p>Por favor, confirma cuántas personas asistirán</p>
     <button class="btn">Confirmar</button>
@@ -65,7 +70,7 @@
         <img src="./images/WhatsApp%2520Image%25202025-11-13%2520at%252015_23_30.jpeg" alt="Ana y Marina sonrientes con un clavel en la cabeza">
     </div>
 </div>
-<div class="alojamiento texto">
+<div class="alojamiento texto fade-lateral">
     <h2>Alojamiento</h2>
     <p>Si vienes de fuera y necesitas alojamiento, puedes quedarte en el mismo hotel de la boda utilizando nuestro código de descuento <span>14702316</span> (Válido para la noche de boda y el día de antes)</p>
 </div>
@@ -77,19 +82,19 @@
         <button class="btn">Marina</button>
     </div>
 </div>
-<div class="countdown-timer">
+<div class="countdown-timer fade-lateral">
     <ul class="countdown-timer-ul">
-        <div class="countainer-ul">
-            <li class="date-item"><span class="days">0</span><p>Días</p></li>
-            <li class="date-item"><span class="hours">0</span><p>Horas</p></li>
-            <li class="date-item"><span class="minutes">0</span><p>Minutos</p></li>
-            <li class="date-item"><span class="seconds">0</span><p>Segundos</p></li>
-        </div>
+        <li class="date-item"><span class="days">0</span><p>Días</p></li>
+        <li class="date-item"><span class="hours">0</span><p>Horas</p></li>
+        <li class="date-item"><span class="minutes">0</span><p>Minutos</p></li>
+        <li class="date-item"><span class="seconds">0</span><p>Segundos</p></li>
     </ul>
 </div>
 <footer>
     <img src="./images/4.webp" alt="clavel rojo" width="75">
     <h1>Marina & Ana</h1>
 </footer>
+</main>
+<audio id="musica" src="images/Pichi_LinaMorgan.mp3"></audio>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const expirationDate = 'May 23, 2026 17:44:59';
+const expirationDate = '2026-05-23T17:44:59';
 let deadlineTime = new Date(expirationDate);
 
 deadlineTime.setDate(deadlineTime.getDate());
@@ -43,3 +43,20 @@ function updateCountdown() {
 let countdownInterval = null;
 updateCountdown();
 countdownInterval = setInterval(updateCountdown, 1000);
+
+const audio = document.getElementById("musica");
+const btn = document.getElementById("toggleMusic");
+const icon = document.getElementById("musicIcon");
+
+audio.loop = true;
+
+btn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        icon.innerHTML = `<rect x="6" y="5" width="4" height="14"></rect>
+                          <rect x="14" y="5" width="4" height="14"></rect>`;
+    } else {
+        audio.pause();
+        icon.innerHTML = `<path d="M8 5v14l11-7z"></path>`;
+    }
+});
